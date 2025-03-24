@@ -1,36 +1,37 @@
 
+using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [Serializable]
-public class itemData
+public class ItemData
 {
-	public int id;	
-	public string itemName;
-	public string description;
-	public string nameEng;
-	public string itemTypeString;
-	[NonSerialized]
-	public itemType itemType;
-	public int price;
-	public int power;
-	public int level;
-	public bool isStackble;
-	public string iconPath;
+    public int id;
+    public string itemName;
+    public string description;
+    public string nameEng;
+    public string itemTypeString;
+    [NonSerialized]
+    public itemType itemType;
+    public int price;
+    public int power;
+    public int level;
+    public bool isStackable;
+    public string iconPath;
 
+    public void InitalizeEnums()
+    {
+        if (Enum.TryParse(itemTypeString, out itemType parsedType))
+        {
+            itemType = parsedType;
+        }
+        else
+        {
+            Debug.LogError($"아이템 |{itemName}에 유요하지 않은 아이템 타임 : {itemTypeString}");
+            itemType = itemType.Consumable;
+        }
+    }
 
-	//문자열을 열거형으로 변환하느 매서드
-	public void lnitalizeEnums()
-	{
-		if(Enum.TryParse(itemTypeString. out itemType parsedType))
-		{
-			itemType = parsedType;
-		}
-		else
-		{
-			Debug.LogError($"아이템'{itemName}'에 유효하지 않은 아이템 타입 : {itemTypeString}");
-
-			itemType = itemType.Consumable;
-		}
-
-	}
 }
