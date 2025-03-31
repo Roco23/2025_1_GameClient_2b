@@ -4,50 +4,48 @@ using UnityEngine;
 using System.Text;
 using Newtonsoft.Json;
 
-public class itemDataLoader : MonoBehaviour
+
+public class ItemDataLoader : MonoBehaviour
 {
-    // Start is called before the first frame update    
+    [SerializeField]
+    private string jsonFileName = "items";
+
+    private List<ItemData> itemList;
+
+    // Start is called before the first frame update
     void Start()
     {
-
-        [SerializeField]
-        private String JsonFileName = "items";
-
-        private List<itemData> itemList;
+        LoadItemData();
+    }
 
     void LoadItemData()
     {
-        TextAsset jsonFile = Resources.Load<TextAsset>(JsonFileName);
-
-        if(jsonFile != null)
+        TextAsset jsonFile = Resources.Load<TextAsset>(jsonFileName);
+        if (jsonFile != null)
         {
-            byte[] bytes = Encoing.Default.GetBytes(JsonFile.text);
-            string correntText = Encoing.UTF8.GetString(bytes);
+            byte[] bytes = Encoding.Default.GetBytes(jsonFile.text);
+            string correntText = Encoding.UTF8.GetString(bytes);
 
-            itemList = JsonConvert.Deserialize0bject<List<itemData>>(correntText);
+            itemList = JsonConvert.DeserializeObject<List<ItemData>>(correntText);
 
             Debug.Log($"로드된 아이템 수 : {itemList.Count}");
 
-            foreach(var item in itemList)
+            foreach (var item in itemList)
             {
-                Debug.Log($"아이템: {EncodeKorean(item.itemName)}, 설명 : {EncodeKorean(item.description)}");
+                Debug.Log($"아이템: {EncodeKorean(item.itemName)}, 설명: {EncodeKorean(item.description)} ");
             }
-        { 
-        else
         }
+        else
         {
-            Debug.LogError($"JSON 파일을 찾을 수 없습니다. : {JsonFileName}");
-
-
+            Debug.LogError($"JSON 파일을 찾을 수 없습니다 : {jsonFileName}");
+        }
     }
 
-    private String EncodeKorean(String text)
+    private string EncodeKorean(string text)
     {
-        if (string.isNullOrEmpty(text)) return "";
-        byte[] bytes = Encoing.Default.GetBytes(text);
-        return Encoing.UTF8.GetString(bytes);
-
+        if (string.IsNullOrEmpty(text)) return "";
+        byte[] bytes = Encoding.Default.GetBytes(text);
+        return Encoding.UTF8.GetString(bytes);
     }
 
-   
 }
