@@ -16,7 +16,7 @@ MonoBehaviour:
   characterName: "\uD0D0\uD5D8\uAC00"
   text: "\uC55E\uC5D0 \uAC15\uC774 \uBCF4\uC785\uB2C8\uB2E4. \uB2E4\uB9AC\uB294 \uBB34\uB108\uC838
     \uC788\uACE0 \uAC74\uB108\uD3B8\uC5D0 \uB9C8\uC744\uC774 \uBCF4\uC785\uB2C8\uB2E4."
-  nextild: 25
+  nextld: 10
   choices: []
   portrait: {fileID: 0}
   portraitPath: Characters/Explorer

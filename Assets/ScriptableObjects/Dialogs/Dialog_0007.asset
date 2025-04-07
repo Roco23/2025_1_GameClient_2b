@@ -17,7 +17,7 @@ MonoBehaviour:
   text: "\uC800 \uBD81\uCABD \uC0D8\uC5D0\uC11C \uBB3C\uC744 \uAC00\uC838\uB2E4 \uC8FC\uAC8C.
     \uADF8\uB7EC\uBA74 \uC232\uC744 \uBE60\uC838\uB098\uAC08 \uC218 \uC788\uB294
     \uC9C0\uB3C4\uB97C \uC8FC\uACA0\uB124."
-  nextild: 20
+  nextld: 8
   choices: []
   portrait: {fileID: 0}
   portraitPath: Characters/OldMan

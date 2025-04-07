@@ -16,7 +16,7 @@ MonoBehaviour:
   characterName: "\uB178\uC778"
   text: "\uC5B4\uC11C \uC624\uAC8C, \uC80A\uC740\uC774. \uC624\uB79C\uB9CC\uC5D0
     \uC190\uB2D8\uC774 \uCC3E\uC544\uC654\uAD70."
-  nextild: 6
+  nextld: 6
   choices: []
   portrait: {fileID: 0}
   portraitPath: Characters/OldMan

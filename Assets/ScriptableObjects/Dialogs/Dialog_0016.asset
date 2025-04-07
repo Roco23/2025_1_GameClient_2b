@@ -17,7 +17,7 @@ MonoBehaviour:
   text: "\uC544\uC27D\uB124\uC694. \uADF8\uB798\uB3C4 \uC5EC\uD589 \uC870\uC2EC\uD558\uC138\uC694!
     \uC774 \uC55E\uC5D0 \uAC08\uB9BC\uAE38\uC774 \uB098\uC624\uBA74 \uC67C\uCABD\uC73C\uB85C
     \uAC00\uC138\uC694. \uC624\uB978\uCABD\uC740 \uC704\uD5D8\uD569\uB2C8\uB2E4."
-  nextild: 17
+  nextld: 17
   choices: []
   portrait: {fileID: 0}
   portraitPath: Characters/Merchant
