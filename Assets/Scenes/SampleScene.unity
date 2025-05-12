@@ -755,6 +755,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f073a32f69f075e4aa68e08438982b0a, type: 2}
   - {fileID: 11400000, guid: 2a61960e8725d6a44ac525257633a444, type: 2}
   - {fileID: 11400000, guid: d85327194c00404438b37eee15b5ddb4, type: 2}
+  - {fileID: 11400000, guid: f8f766d700513e64b89620f312c575c5, type: 2}
+  - {fileID: 11400000, guid: cb535cb7aea8a654b9850c0124b1e0b8, type: 2}
+  - {fileID: 11400000, guid: 2945b48a0b0de854fafdc2bf30d964c0, type: 2}
+  - {fileID: 11400000, guid: a20b5aaface75ba4aa1bf5fb50fd8e42, type: 2}
   handCards: []
   discardCards: []
   cardPrefab: {fileID: 6425209406648749440, guid: 0ac887c4fdbce554898a0e5e8e28aa3a,
@@ -1101,7 +1105,7 @@ GameObject:
   - component: {fileID: 1988844623}
   m_Layer: 7
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
